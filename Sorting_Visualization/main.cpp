@@ -4,7 +4,7 @@
 void Test()
 {
 	Sort<int>a(600);
-	Sort<int>b(a);
+	Sort<int>b(a);	//copy test
 	Draw(a);
 	{
 		Timer t;
