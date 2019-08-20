@@ -97,6 +97,8 @@ public:
 	void MergeSort();
 	void SelectionSort();
 	void CountingSort();
+	void InsertionSort();
+	void ShellSort();
 
 	/*Performance*/
 };
@@ -368,4 +370,24 @@ void Sort<T>::SelectionSort()
 		//Insert(data,i,min);
 		Swap(data, i, min_index);
 	}
+}
+
+template<typename T>
+void Sort<T>::InsertionSort()
+{
+	for (size_t i = 1; i < numberOfElements; ++i)
+	{
+		size_t j = i - 1;
+		size_t current = i;
+		while (j >= 0&&Compare(data, j, current))
+		{
+			Swap(data, j--, current--);
+		}
+	}
+}
+
+template<typename T>
+void Sort<T>::ShellSort()
+{
+
 }

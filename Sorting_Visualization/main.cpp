@@ -4,7 +4,7 @@
 void Test()
 {
 	Sort<int>a(600);
-	Sort<int>b(a);	//copy test
+	Sort<int>b(600,Sort<int>::NEARLY_SORTED);	//copy test
 	Draw(a);
 	{
 		Timer t;
@@ -14,7 +14,7 @@ void Test()
 	Draw(b);
 	{
 		Timer t;
-		b.MergeSort();
+		b.InsertionSort();
 	}
 }
 
